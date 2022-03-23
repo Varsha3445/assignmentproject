@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220323 16:14:42.590" rpa="false" schemaversion="2">
+<suite id="s1" name="Myntra Login Suite" source="C:\Users\DELL1\Desktop\LTTS\robot\myntra_suite\myntra_suite\myntra_login_suite.robot">
+<test id="s1-t1" name="TC1">
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<arg>Path</arg>
+<arg>${EXECDIR}${/}driver${/}</arg>
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<msg timestamp="20220323 16:14:42.969" level="INFO">Environment variable 'Path' set to value 'C:\Program Files\Java\jdk1.8.0_144\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Users\DELL1\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\DELL1\AppData\Local\Programs\Python\Python310\;C:\Users\DELL1\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\DELL1\Desktop\LTTS\robot\myntra_suite\driver\'.</msg>
+<status status="PASS" starttime="20220323 16:14:42.969" endtime="20220323 16:14:42.969"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=https://www.myntra.com</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220323 16:14:42.970" level="INFO">Opening browser 'chrome' to base url 'https://www.myntra.com'.</msg>
+<status status="PASS" starttime="20220323 16:14:42.970" endtime="20220323 16:15:10.473"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220323 16:15:10.474" endtime="20220323 16:15:10.590"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220323 16:15:10.600" endtime="20220323 16:15:10.613"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>xpath=//span[normalize-space()='Profile']</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220323 16:15:10.621" level="INFO">Simulating Mouse Over on element 'xpath=//span[normalize-space()='Profile']'.</msg>
+<status status="PASS" starttime="20220323 16:15:10.619" endtime="20220323 16:15:10.974"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[@class='desktop-linkButton']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220323 16:15:10.976" level="INFO">Clicking element 'xpath=//a[@class='desktop-linkButton']'.</msg>
+<status status="PASS" starttime="20220323 16:15:10.975" endtime="20220323 16:15:25.229"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@type='tel']</arg>
+<arg>9998886665</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220323 16:15:25.232" level="INFO">Typing text '9998886665' into text field 'xpath=//input[@type='tel']'.</msg>
+<status status="PASS" starttime="20220323 16:15:25.231" endtime="20220323 16:15:25.392"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[@class='submitBottomOption']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220323 16:15:25.393" level="INFO">Clicking element 'xpath=//div[@class='submitBottomOption']'.</msg>
+<status status="PASS" starttime="20220323 16:15:25.393" endtime="20220323 16:15:25.499"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>xpath=//div[normalize-space()='MEN']</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220323 16:15:25.501" level="INFO">Simulating Mouse Over on element 'xpath=//div[normalize-space()='MEN']'.</msg>
+<status status="PASS" starttime="20220323 16:15:25.500" endtime="20220323 16:15:25.790"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[@class='desktop-categoryLink']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220323 16:15:25.792" level="INFO">Clicking element 'xpath=//a[@class='desktop-categoryLink']'.</msg>
+<msg timestamp="20220323 16:15:46.161" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220323 16:15:46.165" level="FAIL">Element with locator 'xpath=//a[@class='desktop-categoryLink']' not found.</msg>
+<status status="FAIL" starttime="20220323 16:15:25.791" endtime="20220323 16:15:46.166"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220323 16:15:46.167" endtime="20220323 16:15:49.115"/>
+</kw>
+<status status="FAIL" starttime="20220323 16:14:42.968" endtime="20220323 16:15:49.116">Element with locator 'xpath=//a[@class='desktop-categoryLink']' not found.</status>
+</test>
+<status status="FAIL" starttime="20220323 16:14:42.592" endtime="20220323 16:15:49.120"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Myntra Login Suite">Myntra Login Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
